@@ -1,0 +1,32 @@
+.header {
+  background: linear-gradient(167deg, #0c95f3, #0dfd9a);
+  position: relative;
+  min-height: 40rem;
+}
+
+.header__inner-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  height: 27.5rem;
+}
+
+.header__tri {
+  height: 12.5rem;
+  background: linear-gradient(to top left,#fff 49.95%,rgba(255,255,255,0) 50%);
+  clip-path: polygon(100% 100%,3px 100%,100% 2px);
+}
+
+.header__title {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header__text {
+  font-size: 1.25rem;
+  max-width: 40.25rem;
+}
