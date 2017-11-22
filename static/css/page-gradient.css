@@ -6,7 +6,7 @@
 	width: 100%;
 	z-index: -1;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .page-gradient {
     min-height: 48rem;
   }
