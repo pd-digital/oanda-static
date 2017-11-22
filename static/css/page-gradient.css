@@ -6,6 +6,11 @@
 	width: 100%;
 	z-index: -1;
 }
+@media (max-width: 768px) {
+  .page-gradient {
+    min-height: 48rem;
+  }
+}
 
 .page-gradient__tri {
   height: 12.5rem;
