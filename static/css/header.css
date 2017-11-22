@@ -1,7 +1,6 @@
 .header {
   background: linear-gradient(167deg, #0c95f3, #0dfd9a);
   position: relative;
-
   min-height: 38rem;
 }
 
@@ -13,6 +12,11 @@
   color: #fff;
   text-align: center;
   height: 27.5rem;
+}
+@media (max-width: 768px) {
+  .header__inner-wrap {
+    padding-top: 7rem;
+  }
 }
 
 .header__tri {
@@ -27,8 +31,17 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 .header__text {
   font-size: 1.25rem;
+  font-weight: 500;
   line-height: 1.875rem;
   max-width: 40.25rem;
 }
