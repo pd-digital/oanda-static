@@ -1,13 +1,14 @@
 .header {
   background: linear-gradient(167deg, #0c95f3, #0dfd9a);
   position: relative;
-  min-height: 40rem;
+
+  min-height: 38rem;
 }
 
 .header__inner-wrap {
+  padding-top: 8rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: #fff;
   text-align: center;
@@ -22,11 +23,12 @@
 
 .header__title {
   font-size: 3rem;
-  line-height: 3rem;
+  line-height: 3.625rem;
   margin-bottom: 1rem;
 }
 
 .header__text {
   font-size: 1.25rem;
+  line-height: 1.875rem;
   max-width: 40.25rem;
 }
