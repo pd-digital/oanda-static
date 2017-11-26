@@ -1,8 +1,9 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	line-height: 1.25rem;
+	line-height: 1.5rem;
 	color: #697684;
+	box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10,12 +11,22 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 }
 
+a {
+	font-weight: 600;
+	color: $link-colour;
+  text-decoration: none;
+
+  &::after {
+    content: ' >'
+  }
+}
+
 .container {
-	max-width: 1140px;
+	max-width: 68.25rem;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 
 	&.container--cards {
 		padding-left: 0;

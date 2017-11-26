@@ -42,7 +42,9 @@ $slick-opacity-not-active: 0.25 !default;
 /* Slider */
 
 .slick-list {
-  padding: 0 25px;
+  @include small-screens {
+    padding: 0 25px;
+  }
 
     .slick-loading & {
         background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;

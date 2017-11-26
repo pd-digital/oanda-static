@@ -1,0 +1,21 @@
+$gutters: 1.875rem;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-1 * $gutters / 2);
+}
+
+.col-6 {
+  box-sizing: border-box;
+  flex: 1 1 span(6 of 12 set-gutters ($gutters * 6));
+  margin: 0 ($gutters / 2);
+
+  @include small-screens {
+    flex: 1 1 100%;
+
+    + .col-6 {
+      margin-top: 3rem;
+    }
+  }
+}

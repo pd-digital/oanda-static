@@ -1,22 +1,16 @@
 @import 'reset';
-@import 'reset';
+@import 'susy/susy';
 
 @import 'variables';
-
-@import 'susy/susy';
-$susy: (
-  'columns': susy-repeat(12),
-  'gutters': 1.875rem,
-  'spread': 'narrow',
-  'container-spread': 'narrow',
-);
 
 @import 'mixins/responsive';
 
 @import 'common';
+@import 'grid';
 @import 'components/header';
 @import 'components/page_gradient';
 @import 'components/cards';
+@import 'components/section';
 
 @import 'vendor/slick';
 @import 'vendor/slick-theme';

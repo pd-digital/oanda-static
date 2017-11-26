@@ -1,4 +1,5 @@
 $margin-top-bottom-offset: 0.625rem;
+$gutters: 1.875rem;
 
 .cards {
   margin-top: -$margin-top-bottom-offset;
@@ -7,7 +8,7 @@ $margin-top-bottom-offset: 0.625rem;
   @include wide-screens {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 (gutter() * -1 / 2);
+    margin: 0 -1 * $gutters / 2;
   }
 }
 
@@ -16,7 +17,7 @@ $margin-top-bottom-offset: 0.625rem;
   flex-direction: column;
   justify-content: space-between;
 
-  margin: $margin-top-bottom-offset (gutter() / 2);
+  margin: $margin-top-bottom-offset $gutters / 2;
   background: #fff;
   border-radius: 0.625rem;
   text-align: center;
@@ -26,7 +27,7 @@ $margin-top-bottom-offset: 0.625rem;
   @include wide-screens {
     margin-top: 0;
     margin-bottom: 0;
-    flex: 1 1 span(1 at 1);
+    flex: 1 1 span(3 of 12 set-gutters ($gutters * 8));
   }
 }
 
@@ -45,14 +46,4 @@ $margin-top-bottom-offset: 0.625rem;
   opacity: 0.8;
   line-height: 1.5rem;
   margin-bottom: 1rem;
-}
-
-.card__link {
-  font-weight: 600;
-	color: $link-colour;
-  text-decoration: none;
-
-  &::after {
-    content: ' >'
-  }
 }
