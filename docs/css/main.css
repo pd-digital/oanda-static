@@ -106,19 +106,16 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1140px;
   margin-left: auto;
-  margin-right: auto; }
-  @media only screen and (max-width: 719px) {
-    .container {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem; } }
-  @media only screen and (max-width: 719px) {
-    .container.container--cards {
-      padding-left: 0;
-      padding-right: 0; } }
-  @media only screen and (min-width: 720px) and (max-width: 1023px) {
-    .container.container--cards {
-      padding-left: 0;
-      padding-right: 0; } }
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; }
+  .container.container--cards {
+    padding-left: 0;
+    padding-right: 0; }
+    @media only screen and (min-width: 1024px) {
+      .container.container--cards {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem; } }
 
 .header {
   margin: 8rem 0 3.5rem;
