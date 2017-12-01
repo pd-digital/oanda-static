@@ -64,8 +64,12 @@ a {
   a::after {
     content: ' >'; }
 
+hr {
+  border: none;
+  border-bottom: 1px solid #d2d6da; }
+
 .container {
-  max-width: 68.25rem;
+  max-width: 71.25rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;

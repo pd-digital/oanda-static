@@ -21,8 +21,13 @@ a {
   }
 }
 
+hr {
+	border: none;
+	border-bottom: 1px solid $grey-1;
+}
+
 .container {
-	max-width: 68.25rem;
+	max-width: 71.25rem;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
