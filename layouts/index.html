@@ -10,14 +10,21 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500|Roboto:500" rel="stylesheet">
 </head>
 <body>
-  {{ partial "header.html" . }}
-  {{ partial "cards.html" . }}
-  {{ partial "section1.html" . }}
-  <div class="container"><hr/></div>
-  {{ partial "testimonial.html" . }}
+  <div class="page-wrapper">
+    {{ partial "header.html" . }}
+    {{ partial "cards.html" . }}
+    {{ partial "section1.html" . }}
+    {{ partial "divider.html" . }}
 
-  {{ partial "footer.html" . }}
-  {{ partial "page-gradient.html" . }}
+    {{ partial "testimonial.html" . }}
+    {{ partial "divider.html" . }}
+
+    {{ partial "section2.html" . }}
+    {{ partial "divider.html" . }}
+
+    {{ partial "footer.html" . }}
+    {{ partial "page-gradient.html" . }}
+  </div>
 
   <!-- Dem JS -->
   <script src="./js/jquery-3.2.1.min.js"></script>

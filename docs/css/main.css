@@ -89,6 +89,10 @@ hr {
         padding-left: 1.25rem;
         padding-right: 1.25rem; } }
 
+.page-wrapper {
+  width: 100%;
+  overflow: hidden; }
+
 @media only screen and (min-width: 1024px) {
   .row {
     margin: 0 -1.875rem; }
@@ -107,6 +111,25 @@ hr {
     margin-left: 1.875rem; }
     .col-6 + .col-6 {
       margin-top: 0; } }
+
+.page-gradient {
+  background: linear-gradient(167deg, #0c95f3, #0dfd9a);
+  position: absolute;
+  top: 0;
+  min-height: 38rem;
+  width: 100%;
+  z-index: -1; }
+
+@includes medium-screens {
+  .page-gradient {
+    min-height: 48rem; } }
+  .page-gradient .page-gradient__tri {
+    height: 12.5rem;
+    background: linear-gradient(to top left, #fff 49.95%, rgba(255, 255, 255, 0) 50%);
+    clip-path: polygon(100% 100%, 3px 100%, 100% 2px);
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
 
 .header {
   margin: 8rem 0 3.5rem;
@@ -132,25 +155,6 @@ hr {
     font-weight: 500;
     line-height: 1.875rem;
     max-width: 40.25rem; }
-
-.page-gradient {
-  background: linear-gradient(167deg, #0c95f3, #0dfd9a);
-  position: absolute;
-  top: 0;
-  min-height: 38rem;
-  width: 100%;
-  z-index: -1; }
-
-@includes medium-screens {
-  .page-gradient {
-    min-height: 48rem; } }
-  .page-gradient .page-gradient__tri {
-    height: 12.5rem;
-    background: linear-gradient(to top left, #fff 49.95%, rgba(255, 255, 255, 0) 50%);
-    clip-path: polygon(100% 100%, 3px 100%, 100% 2px);
-    bottom: 0;
-    position: absolute;
-    width: 100%; }
 
 .cards {
   margin-top: -0.625rem;
@@ -198,8 +202,11 @@ hr {
 .section {
   margin-top: 5.75rem;
   margin-bottom: 3rem; }
-  .section img {
+  .section .section__img {
     max-width: 100%; }
+  @media only screen and (max-width: 1023px) {
+    .section .section__img--wide {
+      max-width: 100%; } }
   .section .section__title {
     color: #333f48;
     font-size: 2.25rem;

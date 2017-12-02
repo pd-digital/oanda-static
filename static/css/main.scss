@@ -6,9 +6,12 @@
 @import 'mixins/responsive';
 
 @import 'common/common';
+@import 'common/container';
+@import 'common/page_wrapper';
 @import 'common/grid';
+@import 'common/page_gradient';
+
 @import 'components/header';
-@import 'components/page_gradient';
 @import 'components/cards';
 @import 'components/section';
 @import 'components/testimonial';

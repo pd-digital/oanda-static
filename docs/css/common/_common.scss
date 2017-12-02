@@ -33,21 +33,3 @@ hr {
 	border-bottom: 1px solid $grey-1;
 	margin: 3.5rem 0;
 }
-
-.container {
-	max-width: 71.25rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-
-	&.container--cards {
-		padding-left: 0;
-		padding-right: 0;
-
-		@include wide-screens {
-			padding-left: 1.25rem;
-			padding-right: 1.25rem;
-		}
-	}
-}

@@ -2,8 +2,14 @@
   margin-top: 5.75rem;
   margin-bottom: 3rem;
 
-  img {
+  .section__img {
     max-width: 100%;
+  }
+
+  .section__img--wide {
+    @include medium-screens {
+      max-width: 100%;
+    }
   }
 
   .section__title {
