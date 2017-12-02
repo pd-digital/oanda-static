@@ -225,6 +225,14 @@ hr {
       max-width: 11.25rem;
       max-height: 11.25rem; } }
 
+.testimonial .testimonial__name {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: #333f48; }
+
+.testimonial .testimonial__role {
+  opacity: 0.8; }
+
 /* Slider */
 .slick-slider {
   position: relative;

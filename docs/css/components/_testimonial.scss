@@ -17,4 +17,14 @@
       max-height: 11.25rem;
     }
   }
+
+  .testimonial__name {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    color: $heading-colour;
+  }
+
+  .testimonial__role {
+    opacity: 0.8;
+  }
 }
