@@ -213,6 +213,12 @@ hr {
     display: flex;
     padding: 0 10rem; } }
 
+@media only screen and (max-width: 719px) {
+  .testimonial .testimonial__quote {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #333f48; } }
+
 .testimonial .testimonial__image {
   border-radius: 50%;
   max-width: 7.5rem;
@@ -228,6 +234,7 @@ hr {
 .testimonial .testimonial__name {
   margin-top: 1.5rem;
   font-size: 1.25rem;
+  font-weight: 600;
   color: #333f48; }
 
 .testimonial .testimonial__role {

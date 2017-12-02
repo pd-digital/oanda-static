@@ -4,6 +4,14 @@
     padding: 0 10rem;
   }
 
+  .testimonial__quote {
+    @include small-screens {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      color: $heading-colour;
+    }
+  }
+
   .testimonial__image {
     border-radius: 50%;
     max-width: 7.5rem;
@@ -21,6 +29,7 @@
   .testimonial__name {
     margin-top: 1.5rem;
     font-size: 1.25rem;
+    font-weight: 600;
     color: $heading-colour;
   }
 
