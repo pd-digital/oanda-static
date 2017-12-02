@@ -1,0 +1,48 @@
+$margin-top-bottom-offset: 0.625rem;
+$gutters: 1.875rem;
+$foo-layout: (
+  columns: 3,
+  gutter: $gutters,
+);
+
+.proof-points {
+  @include wide-screens {
+    @include grid-container;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1 * $gutters 1.5rem;
+  }
+
+  @include medium-screens {
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .proof-point {
+    display: flex;
+    background: #fff;
+
+    @include wide-screens {
+      @include grid-column(1, $foo-layout);
+    }
+
+    @include medium-screens {
+      + .proof-point {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .proof-point__icon {
+    display: block;
+    margin-right: 1.25rem;
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+
+  .proof-point__title {
+    color: $heading-colour;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
