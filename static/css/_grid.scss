@@ -1,21 +1,25 @@
 $gutters: 1.875rem;
+$grid-layout: (
+  columns: 12,
+  gutter: $gutters,
+);
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 (-1 * $gutters / 2);
+  @include wide-screens {
+    @include grid-container;
+    margin: 0 (-1 * $gutters);
+  }
 }
 
 .col-6 {
-  box-sizing: border-box;
-  flex: 1 1 span(6 of 12 set-gutters ($gutters * 6));
-  margin: 0 ($gutters / 2);
+  + .col-6 {
+    margin-top: 2rem;
+  }
 
-  @include small-screens {
-    flex: 1 1 100%;
-
+  @include wide-screens {
+    @include grid-column(6, $grid-layout);
     + .col-6 {
-      margin-top: 3rem;
+      margin-top: 0;
     }
   }
 }

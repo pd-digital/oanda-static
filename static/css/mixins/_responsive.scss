@@ -3,7 +3,7 @@
 }
 
 @mixin medium-screens {
-  @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg - 1) { @content; }
+  @media only screen and (max-width: $breakpoint-lg - 1) { @content; }
 }
 
 @mixin wide-screens {

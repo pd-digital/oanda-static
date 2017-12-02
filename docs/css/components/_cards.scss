@@ -1,14 +1,19 @@
 $margin-top-bottom-offset: 0.625rem;
 $gutters: 1.875rem;
+$card-layout: (
+  columns: 4,
+  gutter: $gutters,
+);
 
 .cards {
   margin-top: -$margin-top-bottom-offset;
   margin-bottom: -$margin-top-bottom-offset;
 
   @include wide-screens {
+    @include grid-container;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1 * $gutters / 2;
+    margin: 0 -1 * $gutters;
   }
 }
 
@@ -17,17 +22,20 @@ $gutters: 1.875rem;
   flex-direction: column;
   justify-content: space-between;
 
-  margin: $margin-top-bottom-offset $gutters / 2;
   background: #fff;
   border-radius: 0.625rem;
   text-align: center;
   padding: 2.125rem 1rem;
   box-shadow: 0 4px 14px 0 rgba(51, 63, 72, 0.26);
 
+  @include medium-screens {
+    margin: 10px 1.875rem;
+  }
+
   @include wide-screens {
+    @include grid-column(1, $card-layout);
     margin-top: 0;
     margin-bottom: 0;
-    flex: 1 1 span(3 of 12 set-gutters ($gutters * 8));
   }
 }
 

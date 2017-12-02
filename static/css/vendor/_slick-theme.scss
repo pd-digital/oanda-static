@@ -40,12 +40,11 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 /* Slider */
+.slick-slide { height: auto; }
+.slick-track { display: flex; }
+.slick-initialized .slick-slide { display: flex; }
 
 .slick-list {
-  @include small-screens {
-    padding: 0 25px;
-  }
-
     .slick-loading & {
         background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
     }
