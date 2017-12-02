@@ -5,11 +5,9 @@
   }
 
   .testimonial__quote {
-    @include small-screens {
-      font-size: 1.25rem;
-      line-height: 2rem;
-      color: $heading-colour;
-    }
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: $heading-colour;
   }
 
   .testimonial__image {

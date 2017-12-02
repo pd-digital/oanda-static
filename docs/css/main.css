@@ -95,7 +95,7 @@ hr {
 
 @media only screen and (min-width: 1024px) {
   .row {
-    margin: 0 -1.875rem; }
+    margin: 0 -4rem; }
     .row::after {
       clear: both;
       content: "";
@@ -106,9 +106,9 @@ hr {
 
 @media only screen and (min-width: 1024px) {
   .col-6 {
-    width: calc(50% - 2.8125rem);
+    width: calc(50% - 6rem);
     float: left;
-    margin-left: 1.875rem; }
+    margin-left: 4rem; }
     .col-6 + .col-6 {
       margin-top: 0; } }
 
@@ -220,11 +220,10 @@ hr {
     display: flex;
     padding: 0 10rem; } }
 
-@media only screen and (max-width: 719px) {
-  .testimonial .testimonial__quote {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    color: #333f48; } }
+.testimonial .testimonial__quote {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #333f48; }
 
 .testimonial .testimonial__image {
   border-radius: 50%;
