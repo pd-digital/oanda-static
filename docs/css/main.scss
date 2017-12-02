@@ -1,12 +1,12 @@
-@import 'reset';
+@import 'common/reset';
 @import 'vendor/neat/neat';
 
 @import 'variables';
 
 @import 'mixins/responsive';
 
-@import 'common';
-@import 'grid';
+@import 'common/common';
+@import 'common/grid';
 @import 'components/header';
 @import 'components/page_gradient';
 @import 'components/cards';

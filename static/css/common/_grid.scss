@@ -1,0 +1,25 @@
+$gutters: 1.875rem;
+$grid-layout: (
+  columns: 12,
+  gutter: $gutters,
+);
+
+.row {
+  @include wide-screens {
+    @include grid-container;
+    margin: 0 (-1 * $gutters);
+  }
+}
+
+.col-6 {
+  + .col-6 {
+    margin-top: 2rem;
+  }
+
+  @include wide-screens {
+    @include grid-column(6, $grid-layout);
+    + .col-6 {
+      margin-top: 0;
+    }
+  }
+}

@@ -5,18 +5,17 @@
   min-height: 38rem;
 	width: 100%;
 	z-index: -1;
-}
-@media (max-width: 767px) {
-  .page-gradient {
-    min-height: 48rem;
-  }
-}
 
-.page-gradient__tri {
-  height: 12.5rem;
-  background: linear-gradient(to top left,#fff 49.95%,rgba(255,255,255,0) 50%);
-  clip-path: polygon(100% 100%,3px 100%,100% 2px);
-	bottom: 0;
-	position: absolute;
-	width: 100%;
+	@includes medium-screens {
+		min-height: 48rem;
+	}
+
+	.page-gradient__tri {
+	  height: 12.5rem;
+	  background: linear-gradient(to top left,#fff 49.95%,rgba(255,255,255,0) 50%);
+	  clip-path: polygon(100% 100%,3px 100%,100% 2px);
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+	}
 }
