@@ -5,13 +5,13 @@ $grid-layout: (
 );
 
 @mixin col($cols) {
-  + .col-#{$cols} {
+  + [class*="col-"] {
     margin-top: 2rem;
   }
 
   @include wide-screens {
     @include grid-column($cols, $grid-layout);
-    + .col-#{$cols} {
+    + [class*="col-"] {
       margin-top: 0;
     }
   }
@@ -45,10 +45,10 @@ $grid-layout: (
 .row--centered {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   @include medium-screens {
     display: flex;
-    flex-direction: column-reverse;
   }
 }
 

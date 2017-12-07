@@ -118,13 +118,13 @@ hr {
 
 .row--centered {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap; }
   @media only screen and (max-width: 1023px) {
     .row--centered {
-      display: flex;
-      flex-direction: column-reverse; } }
+      display: flex; } }
 
-.col-1 + .col-1 {
+.col-1 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -132,10 +132,10 @@ hr {
     width: calc(8.33333% - 4.33333rem);
     float: left;
     margin-left: 4rem; }
-    .col-1 + .col-1 {
+    .col-1 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-2 + .col-2 {
+.col-2 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -143,10 +143,10 @@ hr {
     width: calc(16.66667% - 4.66667rem);
     float: left;
     margin-left: 4rem; }
-    .col-2 + .col-2 {
+    .col-2 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-3 + .col-3 {
+.col-3 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -154,10 +154,10 @@ hr {
     width: calc(25% - 5rem);
     float: left;
     margin-left: 4rem; }
-    .col-3 + .col-3 {
+    .col-3 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-4 + .col-4 {
+.col-4 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -165,10 +165,10 @@ hr {
     width: calc(33.33333% - 5.33333rem);
     float: left;
     margin-left: 4rem; }
-    .col-4 + .col-4 {
+    .col-4 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-5 + .col-5 {
+.col-5 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -176,10 +176,10 @@ hr {
     width: calc(41.66667% - 5.66667rem);
     float: left;
     margin-left: 4rem; }
-    .col-5 + .col-5 {
+    .col-5 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-6 + .col-6 {
+.col-6 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -187,10 +187,10 @@ hr {
     width: calc(50% - 6rem);
     float: left;
     margin-left: 4rem; }
-    .col-6 + .col-6 {
+    .col-6 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-7 + .col-7 {
+.col-7 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -198,10 +198,10 @@ hr {
     width: calc(58.33333% - 6.33333rem);
     float: left;
     margin-left: 4rem; }
-    .col-7 + .col-7 {
+    .col-7 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-8 + .col-8 {
+.col-8 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -209,10 +209,10 @@ hr {
     width: calc(66.66667% - 6.66667rem);
     float: left;
     margin-left: 4rem; }
-    .col-8 + .col-8 {
+    .col-8 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-9 + .col-9 {
+.col-9 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -220,10 +220,10 @@ hr {
     width: calc(75% - 7rem);
     float: left;
     margin-left: 4rem; }
-    .col-9 + .col-9 {
+    .col-9 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-10 + .col-10 {
+.col-10 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -231,10 +231,10 @@ hr {
     width: calc(83.33333% - 7.33333rem);
     float: left;
     margin-left: 4rem; }
-    .col-10 + .col-10 {
+    .col-10 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-11 + .col-11 {
+.col-11 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -242,10 +242,10 @@ hr {
     width: calc(91.66667% - 7.66667rem);
     float: left;
     margin-left: 4rem; }
-    .col-11 + .col-11 {
+    .col-11 + [class*="col-"] {
       margin-top: 0; } }
 
-.col-12 + .col-12 {
+.col-12 + [class*="col-"] {
   margin-top: 2rem; }
 
 @media only screen and (min-width: 1024px) {
@@ -253,7 +253,7 @@ hr {
     width: calc(100% - 8rem);
     float: left;
     margin-left: 4rem; }
-    .col-12 + .col-12 {
+    .col-12 + [class*="col-"] {
       margin-top: 0; } }
 
 .page-gradient {
