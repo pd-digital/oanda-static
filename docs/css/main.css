@@ -436,26 +436,32 @@ hr {
   font-size: 1.25rem;
   margin-bottom: 0.25rem; }
 
-.feed {
-  box-shadow: 0 4px 16px 0 rgba(105, 118, 132, 0.26);
-  border-radius: 0.625rem;
-  padding: 1.25rem; }
-  .feed .feed-item {
-    display: flex;
-    padding-right: 0.5rem; }
-    .feed .feed-item + .feed-item {
-      padding-top: 1.25rem;
-      margin-top: 1.25rem;
-      border-top: 1px solid #d2d6da; }
-  .feed .feed-item__img {
-    margin-right: 1.25rem; }
-  .feed .feed-item__title {
-    font-size: 1.25rem;
-    margin: 0.5rem 0; }
-  .feed .feed-item__date {
-    color: #a5adb5;
-    font-size: 0.75rem;
-    text-transform: uppercase; }
+@media only screen and (min-width: 1024px) {
+  .feed {
+    box-shadow: 0 4px 16px 0 rgba(105, 118, 132, 0.26);
+    border-radius: 0.625rem;
+    padding: 1.25rem; } }
+
+.feed .feed-item {
+  display: flex;
+  padding-right: 0.5rem; }
+  .feed .feed-item + .feed-item {
+    padding-top: 1.25rem;
+    margin-top: 1.25rem;
+    border-top: 1px solid #d2d6da; }
+
+.feed .feed-item__img {
+  margin-right: 1.25rem;
+  border-radius: 50%; }
+
+.feed .feed-item__title {
+  font-size: 1.25rem;
+  margin: 0.5rem 0; }
+
+.feed .feed-item__date {
+  color: #a5adb5;
+  font-size: 0.75rem;
+  text-transform: uppercase; }
 
 .timeline {
   padding: 0.625rem;
