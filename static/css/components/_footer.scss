@@ -1,4 +1,7 @@
 .footer {
+  @include wide-screens {
+    margin-top: 6rem;
+  }
   background-color: $grey-3;
   border-top: 1px solid $grey-1;
 }
