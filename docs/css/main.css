@@ -598,9 +598,14 @@ hr {
     margin: 1.5rem 0; }
     @media only screen and (min-width: 1024px) {
       .ctas .cta-wrapper {
-        width: 33.333%; }
+        flex: 1 1 33.333%;
+        display: flex;
+        justify-content: center; }
         .ctas .cta-wrapper + .cta-wrapper {
           border-left: 1px solid #d2d6da; } }
+  .ctas a {
+    display: inline-block;
+    margin: 0 auto; }
   .ctas .cta {
     display: flex;
     align-items: center;

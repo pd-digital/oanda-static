@@ -11,12 +11,20 @@
     margin: 1.5rem 0;
 
     @include wide-screens {
-      width: 33.333%;
+      // width: 33.333%;
+      flex: 1 1 33.333%;
+      display: flex;
+      justify-content: center;
 
       + .cta-wrapper {
         border-left: 1px solid $grey-1;
       }
     }
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 auto;
   }
 
   .cta {
