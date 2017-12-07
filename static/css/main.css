@@ -587,6 +587,36 @@ hr {
     .timeline--mobile {
       display: none; } }
 
+.ctas {
+  border-bottom: 1px solid #d2d6da; }
+  @media only screen and (min-width: 1024px) {
+    .ctas {
+      display: flex;
+      justify-content: space-around; } }
+  .ctas .cta-wrapper {
+    padding: 1rem 0;
+    margin: 1.5rem 0; }
+    @media only screen and (min-width: 1024px) {
+      .ctas .cta-wrapper {
+        width: 33.333%; }
+        .ctas .cta-wrapper + .cta-wrapper {
+          border-left: 1px solid #d2d6da; } }
+  .ctas .cta {
+    display: flex;
+    align-items: center;
+    color: #697684; }
+    @media only screen and (min-width: 1024px) {
+      .ctas .cta {
+        justify-content: center; } }
+  .ctas .cta__image {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem; }
+
+.footer {
+  background-color: #f7f8f9;
+  border-top: 1px solid #d2d6da; }
+
 /* Slider */
 .slick-slider {
   position: relative;

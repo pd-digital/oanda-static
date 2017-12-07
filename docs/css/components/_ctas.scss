@@ -1,0 +1,36 @@
+.ctas {
+  border-bottom: 1px solid $grey-1;
+
+  @include wide-screens {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .cta-wrapper {
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+
+    @include wide-screens {
+      width: 33.333%;
+
+      + .cta-wrapper {
+        border-left: 1px solid $grey-1;
+      }
+    }
+  }
+
+  .cta {
+    display: flex;
+    align-items: center;
+    @include wide-screens {
+      justify-content: center;
+    }
+    color: $text-colour;
+  }
+
+  .cta__image {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+}
