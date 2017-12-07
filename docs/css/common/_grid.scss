@@ -17,13 +17,13 @@ $grid-layout: (
     flex-direction: column-reverse;
   }
 
-  .col-6 {
+  > :first-child {
     margin-top: 2rem;
     @include wide-screens {
       margin-top: 0;
     };
 
-    + .col-6 {
+    + div {
       margin-top: 0;
     }
   }

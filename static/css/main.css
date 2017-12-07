@@ -108,12 +108,12 @@ hr {
     display: flex;
     flex-direction: column-reverse; } }
 
-.row--reverse .col-6 {
+.row--reverse > :first-child {
   margin-top: 2rem; }
   @media only screen and (min-width: 1024px) {
-    .row--reverse .col-6 {
+    .row--reverse > :first-child {
       margin-top: 0; } }
-  .row--reverse .col-6 + .col-6 {
+  .row--reverse > :first-child + div {
     margin-top: 0; }
 
 .row--centered {
