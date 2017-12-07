@@ -1,0 +1,84 @@
+$box-width: 11.75rem;
+$arrow-size: 4px;
+
+.timeline {
+  padding: 0.625rem;
+  padding-right: 0;
+  overflow: scroll;
+
+  .timeline__inner {
+    transform: translateX(10px);
+  }
+
+  .top-row,
+  .bottom-row {
+    display: flex;
+  }
+
+  .bottom-row {
+    margin-left: 7rem;
+  }
+
+  .time {
+    border: 3px solid $green;
+    margin: 1rem 0;
+    margin-left: $box-width / 2;
+    width: 100%;
+  }
+
+  .event {
+    position: relative;
+    flex: 0 0 $box-width;
+    padding: 1rem 1rem 1.25rem;
+    box-shadow: 0 2px 12px 0 #d2d6da;
+    border-radius: 4px;
+    min-height: 7.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-right: 3.25rem;
+
+    &::after {
+      content: "";
+      background-color: $blue;
+      width:10px;
+      height: 10px;
+      position: absolute;
+      left: 50%;
+      margin-left: -5px;
+      border-radius: 50%;
+    }
+  }
+
+  .event--top {
+    &::after {
+      bottom: -24px;
+    }
+  }
+
+  .event--bottom {
+    &::after {
+      top: -24px;
+    }
+  }
+
+  .date {
+    color: $link-colour;
+    font-weight: 600;
+  }
+
+  .arrow {
+    position: absolute;
+    left: 50%;
+    margin-left: -$arrow-size;
+  }
+
+  .arrow--bottom {
+    bottom: -$arrow-size;
+    @include arrow('bottom', $white, $arrow-size);
+  }
+
+  .arrow--top {
+    top: -$arrow-size;
+    @include arrow('top', $white, $arrow-size);
+  }
+}

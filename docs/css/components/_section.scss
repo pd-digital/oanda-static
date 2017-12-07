@@ -22,4 +22,15 @@
   .section__body {
     margin-bottom: 1.125rem;
   }
+
+  .section__links {
+    margin-top: -0.75rem;
+    display: inline-block;
+  }
+
+  .section__link {
+    margin-top: 0.75rem;
+    width: 50%;
+    float: left;
+  }
 }

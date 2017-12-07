@@ -4,6 +4,19 @@ $grid-layout: (
   gutter: $gutters,
 );
 
+@mixin col($cols) {
+  + .col-#{$cols} {
+    margin-top: 2rem;
+  }
+
+  @include wide-screens {
+    @include grid-column($cols, $grid-layout);
+    + .col-#{$cols} {
+      margin-top: 0;
+    }
+  }
+}
+
 .row {
   @include wide-screens {
     @include grid-container;
@@ -39,15 +52,6 @@ $grid-layout: (
   }
 }
 
-.col-6 {
-  + .col-6 {
-    margin-top: 2rem;
-  }
-
-  @include wide-screens {
-    @include grid-column(6, $grid-layout);
-    + .col-6 {
-      margin-top: 0;
-    }
-  }
+@for $i from 1 through 12 {
+  .col-#{$i} { @include col($i) }
 }
