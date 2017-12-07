@@ -2,9 +2,11 @@ $box-width: 11.75rem;
 $arrow-size: 4px;
 
 .timeline {
-  padding: 0.625rem;
-  padding-right: 0;
-  overflow: scroll;
+  @include wide-screens {
+    overflow: scroll;
+    padding: 0.625rem;
+    padding-right: 0;
+  }
 
   .timeline__inner {
     transform: translateX(10px);
@@ -21,9 +23,15 @@ $arrow-size: 4px;
 
   .time {
     border: 3px solid $green;
-    margin: 1rem 0;
-    margin-left: $box-width / 2;
-    width: 100%;
+    margin-right: 1rem;
+    border-radius: 4px;
+    height: 100%;
+
+    @include wide-screens {
+      margin: 1rem 0;
+      margin-left: $box-width / 2;
+      width: 100%;
+    }
   }
 
   .event {
@@ -32,10 +40,10 @@ $arrow-size: 4px;
     padding: 1rem 1rem 1.25rem;
     box-shadow: 0 2px 12px 0 #d2d6da;
     border-radius: 4px;
-    min-height: 7.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
     margin-right: 3.25rem;
+    width: 100%;
 
     &::after {
       content: "";
@@ -43,9 +51,35 @@ $arrow-size: 4px;
       width:10px;
       height: 10px;
       position: absolute;
-      left: 50%;
-      margin-left: -5px;
+      left: -24px;
+      top: 50%;
+      margin-top: -5px;
       border-radius: 50%;
+    }
+
+    @include wide-screens {
+      min-height: 7.5rem;
+
+      &::after {
+        content: "";
+        background-color: $blue;
+        width:10px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        margin-left: -5px;
+        margin-top: 0;
+        border-radius: 50%;
+        top: auto;
+      }
+    }
+
+    +.event {
+      margin-top: .75rem;
+
+      @include wide-screens {
+        margin-top: 0;
+      }
     }
   }
 
@@ -81,4 +115,27 @@ $arrow-size: 4px;
     top: -$arrow-size;
     @include arrow('top', $white, $arrow-size);
   }
+
+  .arrow--left {
+    left: -$arrow-size;
+    margin-left: 0;
+    top: 50%;
+    margin-top: -$arrow-size;
+    @include arrow('left', $white, $arrow-size);
+  }
+}
+
+.timeline--desktop {
+  display: none;
+  @include wide-screens {
+    display: block;
+  }
+}
+
+.timeline--mobile {
+  @include wide-screens {
+    display: none;
+  }
+
+  display: flex;
 }

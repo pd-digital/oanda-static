@@ -463,68 +463,129 @@ hr {
   font-size: 0.75rem;
   text-transform: uppercase; }
 
-.timeline {
-  padding: 0.625rem;
-  padding-right: 0;
-  overflow: scroll; }
-  .timeline .timeline__inner {
-    transform: translateX(10px); }
-  .timeline .top-row,
-  .timeline .bottom-row {
-    display: flex; }
-  .timeline .bottom-row {
-    margin-left: 7rem; }
-  .timeline .time {
-    border: 3px solid #0dfd9a;
-    margin: 1rem 0;
-    margin-left: 5.875rem;
-    width: 100%; }
-  .timeline .event {
-    position: relative;
-    flex: 0 0 11.75rem;
-    padding: 1rem 1rem 1.25rem;
-    box-shadow: 0 2px 12px 0 #d2d6da;
-    border-radius: 4px;
-    min-height: 7.5rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    margin-right: 3.25rem; }
-    .timeline .event::after {
-      content: "";
-      background-color: #0c95f3;
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      left: 50%;
-      margin-left: -5px;
-      border-radius: 50%; }
-  .timeline .event--top::after {
-    bottom: -24px; }
-  .timeline .event--bottom::after {
-    top: -24px; }
-  .timeline .date {
-    color: #096eb3;
-    font-weight: 600; }
-  .timeline .arrow {
+@media only screen and (min-width: 1024px) {
+  .timeline {
+    overflow: scroll;
+    padding: 0.625rem;
+    padding-right: 0; } }
+
+.timeline .timeline__inner {
+  transform: translateX(10px); }
+
+.timeline .top-row,
+.timeline .bottom-row {
+  display: flex; }
+
+.timeline .bottom-row {
+  margin-left: 7rem; }
+
+.timeline .time {
+  border: 3px solid #0dfd9a;
+  margin-right: 1rem;
+  border-radius: 4px;
+  height: 100%; }
+  @media only screen and (min-width: 1024px) {
+    .timeline .time {
+      margin: 1rem 0;
+      margin-left: 5.875rem;
+      width: 100%; } }
+
+.timeline .event {
+  position: relative;
+  flex: 0 0 11.75rem;
+  padding: 1rem 1rem 1.25rem;
+  box-shadow: 0 2px 12px 0 #d2d6da;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-right: 3.25rem;
+  width: 100%; }
+  .timeline .event::after {
+    content: "";
+    background-color: #0c95f3;
+    width: 10px;
+    height: 10px;
     position: absolute;
-    left: 50%;
-    margin-left: -4px; }
-  .timeline .arrow--bottom {
-    bottom: -4px;
-    display: block;
-    height: 0;
-    width: 0;
-    border-top: 4px solid #fff;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent; }
-  .timeline .arrow--top {
-    top: -4px;
-    display: block;
-    height: 0;
-    width: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 4px solid #fff; }
+    left: -24px;
+    top: 50%;
+    margin-top: -5px;
+    border-radius: 50%; }
+  @media only screen and (min-width: 1024px) {
+    .timeline .event {
+      min-height: 7.5rem; }
+      .timeline .event::after {
+        content: "";
+        background-color: #0c95f3;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 50%;
+        margin-left: -5px;
+        margin-top: 0;
+        border-radius: 50%;
+        top: auto; } }
+  .timeline .event + .event {
+    margin-top: .75rem; }
+    @media only screen and (min-width: 1024px) {
+      .timeline .event + .event {
+        margin-top: 0; } }
+
+.timeline .event--top::after {
+  bottom: -24px; }
+
+.timeline .event--bottom::after {
+  top: -24px; }
+
+.timeline .date {
+  color: #096eb3;
+  font-weight: 600; }
+
+.timeline .arrow {
+  position: absolute;
+  left: 50%;
+  margin-left: -4px; }
+
+.timeline .arrow--bottom {
+  bottom: -4px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent; }
+
+.timeline .arrow--top {
+  top: -4px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid #fff; }
+
+.timeline .arrow--left {
+  left: -4px;
+  margin-left: 0;
+  top: 50%;
+  margin-top: -4px;
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: 4px solid transparent;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid transparent; }
+
+.timeline--desktop {
+  display: none; }
+  @media only screen and (min-width: 1024px) {
+    .timeline--desktop {
+      display: block; } }
+
+.timeline--mobile {
+  display: flex; }
+  @media only screen and (min-width: 1024px) {
+    .timeline--mobile {
+      display: none; } }
 
 /* Slider */
 .slick-slider {
