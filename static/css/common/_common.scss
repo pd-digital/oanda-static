@@ -20,11 +20,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-	font-weight: 600;
 	color: $link-colour;
   text-decoration: none;
 
-  &::after {
+  &.chevron {
+    font-weight: 600;
+  }
+  
+  &.chevron::after {
     content: ' >'
   }
 }

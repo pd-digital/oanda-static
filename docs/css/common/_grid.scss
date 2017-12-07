@@ -11,6 +11,34 @@ $grid-layout: (
   }
 }
 
+.row--reverse {
+  @include medium-screens {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .col-6 {
+    margin-top: 2rem;
+    @include wide-screens {
+      margin-top: 0;
+    };
+
+    + .col-6 {
+      margin-top: 0;
+    }
+  }
+}
+
+.row--centered {
+  display: flex;
+  align-items: center;
+
+  @include medium-screens {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .col-6 {
   + .col-6 {
     margin-top: 2rem;

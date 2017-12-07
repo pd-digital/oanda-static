@@ -1,0 +1,31 @@
+.feed {
+  box-shadow: 0 4px 16px 0 rgba(105, 118, 132, 0.26);
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+
+  .feed-item {
+    display: flex;
+    padding-right: 0.5rem;
+
+    + .feed-item {
+      padding-top: 1.25rem;
+      margin-top: 1.25rem;
+      border-top: 1px solid $grey-1;
+    }
+  }
+
+  .feed-item__img {
+    margin-right: 1.25rem;
+  }
+
+  .feed-item__title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+
+  .feed-item__date {
+    color: $grey-2;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+}
