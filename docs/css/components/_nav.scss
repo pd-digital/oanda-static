@@ -3,6 +3,14 @@
   justify-content: space-between;
   padding-top: 2.25rem;
 
+  .topnav {
+    display: none;
+
+    @include wide-screens {
+      display: flex;
+    }
+  }
+
   .leftnav {
     display: flex;
     align-items: center;
@@ -36,15 +44,17 @@
     display: block;
   }
 
-  .topnav {
-    display: flex;
-  }
-
   .topnav__item + .topnav__item {
     margin-left: 2.25rem;
   }
 
   .nav-link {
     color: $white;
+  }
+
+  .hamburger {
+    @include wide-screens {
+      display: none;
+    }
   }
 }

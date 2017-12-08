@@ -1,5 +1,8 @@
 @import 'common/reset';
 @import 'vendor/neat/neat';
+$hamburger-layer-color: #fff !default;
+$hamburger-types: (slider);
+@import 'vendor/hamburgers/hamburgers';
 
 @import 'variables';
 

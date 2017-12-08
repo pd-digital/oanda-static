@@ -50,6 +50,11 @@
     </div>
 
     <div class="rightnav">
+      <button class="hamburger hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
       <ul class="topnav">
         <li class="topnav__item"><a class="nav-link" href="/search">Search</a></li>
         <li class="topnav__item"><a class="nav-link" href="/signin">Sign in</a></li>
@@ -98,5 +103,14 @@
 
   document.querySelectorAll('.nav-link').forEach(navlink => {
     navlink.addEventListener('click', onNavLinkClick)
+  })
+
+  document.querySelector('.hamburger').addEventListener('click', (e) => {
+    const hamburger = document.querySelector('.hamburger')
+    if (hamburger.className.indexOf('is-active') === -1) {
+      addClass(hamburger, 'is-active')
+    } else {
+      removeClass(hamburger, 'is-active')
+    }
   })
 </script>
