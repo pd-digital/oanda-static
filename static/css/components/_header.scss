@@ -3,13 +3,10 @@
   @include wide-screens {
     margin-top: 4rem;
   }
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #fff;
   text-align: center;
 
-  .header__title {
+  &__title {
     font-size: 3rem;
     line-height: 3.625rem;
     margin-bottom: 1rem;
@@ -22,10 +19,19 @@
     }
   }
 
-  .header__text {
+  &__text {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.875rem;
     max-width: 40.25rem;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    margin-top: 1.5rem;
+  }
+
+  &--left {
+    text-align: left;
   }
 }
