@@ -283,7 +283,8 @@ hr {
     display: flex;
     align-items: center; }
   .nav .logo {
-    margin-right: 3rem; }
+    margin-right: 3rem;
+    display: block; }
   .nav .subnav {
     display: none;
     position: absolute;
