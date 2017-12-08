@@ -71,7 +71,7 @@ table {
     opacity: 0.7; }
 
 .hamburger-box {
-  width: 40px;
+  width: 36px;
   height: 24px;
   display: inline-block;
   position: relative; }
@@ -81,7 +81,7 @@ table {
   top: 50%;
   margin-top: -2px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
+    width: 36px;
     height: 4px;
     background-color: #fff;
     border-radius: 4px;
@@ -113,7 +113,7 @@ table {
 .hamburger--slider.is-active .hamburger-inner {
   transform: translate3d(0, 10px, 0) rotate(45deg); }
   .hamburger--slider.is-active .hamburger-inner::before {
-    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    transform: rotate(-45deg) translate3d(-5.14286px, -6px, 0);
     opacity: 0; }
   .hamburger--slider.is-active .hamburger-inner::after {
     transform: translate3d(0, -20px, 0) rotate(-90deg); }
@@ -347,45 +347,104 @@ hr {
     position: absolute;
     width: 100%; }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2.25rem; }
-  .nav .topnav {
-    display: none; }
-    @media only screen and (min-width: 1024px) {
-      .nav .topnav {
-        display: flex; } }
-  .nav .leftnav {
+@media only screen and (min-width: 1024px) {
+  .nav {
     display: flex;
-    align-items: center; }
-  .nav .logo {
-    margin-right: 3rem;
-    display: block; }
-  .nav .subnav {
-    display: none;
-    position: absolute;
-    top: 4.5rem;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 4px; }
-  .nav .arrow {
-    display: block;
-    height: 0;
-    width: 0;
-    border-left: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
-    border-bottom: 0.5rem solid #fff;
-    position: absolute;
-    top: -0.5rem; }
-  .nav .subnav__item + .subnav__item {
-    margin-top: 1rem; }
-  .nav .active .subnav {
-    display: block; }
+    padding-top: 2.3rem; } }
+
+.nav .topnav {
+  background-color: #fff; }
+  @media only screen and (min-width: 1024px) {
+    .nav .topnav {
+      display: flex;
+      background-color: initial; } }
+
+.nav .mobile-active .topnav {
+  display: block; }
+
+.nav .logo {
+  display: block; }
+
+.nav .nav-header {
+  margin: 0 -1.5rem;
+  position: relative;
+  z-index: 100;
+  padding: 2.3rem 1.5rem;
+  background-color: #0c95f3; }
+  @media only screen and (min-width: 1024px) {
+    .nav .nav-header {
+      background-color: initial;
+      padding: 0;
+      margin: 0;
+      margin-right: 3rem; } }
+
+.nav .blah {
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: transform 0.5s;
+  transform: translateY(-18rem);
+  z-index: 10; }
+  @media only screen and (min-width: 1024px) {
+    .nav .blah {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      position: relative;
+      transform: translateY(0); } }
+  .nav .blah.mobile-active {
+    transform: translateY(0); }
+
+.nav .subnav {
+  display: none;
+  background: #fff;
+  padding: 0.5rem 1.75rem 1rem; }
+  @media only screen and (min-width: 1024px) {
+    .nav .subnav {
+      position: absolute;
+      top: 3rem;
+      border-radius: 4px;
+      padding: 1.5rem; } }
+
+.nav .arrow {
+  display: block;
+  height: 0;
+  width: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid #fff;
+  position: absolute;
+  top: -0.5rem;
+  display: none; }
+  @media only screen and (min-width: 1024px) {
+    .nav .arrow {
+      display: block; } }
+
+.nav .subnav__item + .subnav__item {
+  margin-top: 1rem; }
+
+.nav .active .subnav {
+  display: block; }
+
+@media only screen and (min-width: 1024px) {
   .nav .topnav__item + .topnav__item {
-    margin-left: 2.25rem; }
-  .nav .nav-link {
-    color: #fff; }
+    margin-left: 2.25rem; } }
+
+.nav .nav-link {
+  color: #333f48;
+  padding: 0.75rem 1.75rem;
+  display: block; }
+  @media only screen and (min-width: 1024px) {
+    .nav .nav-link {
+      color: #fff;
+      padding: 0;
+      display: inline-block; } }
+
+.nav .hamburger {
+  position: absolute;
+  top: 1.5rem;
+  right: 0.5rem; }
   @media only screen and (min-width: 1024px) {
     .nav .hamburger {
       display: none; } }

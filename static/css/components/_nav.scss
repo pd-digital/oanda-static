@@ -1,39 +1,86 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2.25rem;
+  @include wide-screens {
+    display: flex;
+    padding-top: 2.3rem;
+  }
 
   .topnav {
-    display: none;
+    background-color: $white;
 
     @include wide-screens {
       display: flex;
+      background-color: initial;
     }
   }
 
-  .leftnav {
-    display: flex;
-    align-items: center;
+  .mobile-active .topnav {
+    display: block;
   }
 
   .logo {
-    margin-right: 3rem;
     display: block;
+  }
+
+  .nav-header {
+    margin: 0 -1.5rem;
+    position: relative;
+    z-index: 100;
+    padding: 2.3rem 1.5rem;
+    background-color: $blue;
+
+    @include wide-screens {
+      background-color: initial;
+      padding: 0;
+      margin: 0;
+      margin-right: 3rem;
+    }
+  }
+
+  .blah {
+    left: 0;
+    right: 0;
+    position: absolute;
+
+    transition: transform 0.5s;
+    transform: translateY(-18rem);
+    z-index: 10;
+
+    @include wide-screens {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      position: relative;
+      transform: translateY(0);
+    }
+
+    &.mobile-active {
+      transform: translateY(0);
+    }
   }
 
   .subnav {
     display: none;
-    position: absolute;
-    top: 4.5rem;
     background: $white;
-    padding: 1.5rem;
-    border-radius: 4px;
+    padding: 0.5rem 1.75rem 1rem;
+
+    @include wide-screens {
+      position: absolute;
+      top: 3rem;
+      border-radius: 4px;
+      padding: 1.5rem;
+    }
   }
 
   .arrow {
     @include arrow('top', $white, 0.5rem);
     position: absolute;
     top: -0.5rem;
+
+    display: none;
+    @include wide-screens {
+      display: block;
+    }
   }
 
   .subnav__item + .subnav__item {
@@ -44,15 +91,31 @@
     display: block;
   }
 
-  .topnav__item + .topnav__item {
-    margin-left: 2.25rem;
+  .topnav__item {
+    + .topnav__item {
+      @include wide-screens {
+        margin-left: 2.25rem;
+      }
+    }
   }
 
   .nav-link {
-    color: $white;
+    color: $heading-colour;
+    padding: 0.75rem 1.75rem;
+    display: block;
+
+    @include wide-screens {
+      color: $white;
+      padding: 0;
+      display: inline-block;
+    }
   }
 
   .hamburger {
+    position: absolute;
+    top: 1.5rem;
+    right: 0.5rem;
+
     @include wide-screens {
       display: none;
     }

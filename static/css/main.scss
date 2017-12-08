@@ -2,6 +2,8 @@
 @import 'vendor/neat/neat';
 $hamburger-layer-color: #fff !default;
 $hamburger-types: (slider);
+$hamburger-layer-width: 36px !default;
+$hamburger-layer-height: 4px !default;
 @import 'vendor/hamburgers/hamburgers';
 
 @import 'variables';
