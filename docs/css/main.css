@@ -378,7 +378,7 @@ hr {
       margin: 0;
       margin-right: 3rem; } }
 
-.nav .blah {
+.nav .nav-main {
   left: 0;
   right: 0;
   position: absolute;
@@ -386,14 +386,14 @@ hr {
   transform: translateY(-18rem);
   z-index: 10; }
   @media only screen and (min-width: 1024px) {
-    .nav .blah {
+    .nav .nav-main {
       width: 100%;
       justify-content: space-between;
       align-items: center;
       display: flex;
       position: relative;
       transform: translateY(0); } }
-  .nav .blah.mobile-active {
+  .nav .nav-main.mobile-active {
     transform: translateY(0); }
 
 .nav .subnav {
