@@ -489,48 +489,58 @@ hr {
   .header--left {
     text-align: left; }
 
-.cards {
-  margin-top: -0.625rem;
-  margin-bottom: -0.625rem; }
+.card-row {
+  margin-top: -0.625rem; }
   @media only screen and (min-width: 1024px) {
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -1.875rem; }
-      .cards::after {
+    .card-row {
+      margin: 0 -1.875rem;
+      display: flex; }
+      .card-row::after {
         clear: both;
         content: "";
         display: block; } }
-  .cards .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: #fff;
-    border-radius: 0.625rem;
-    text-align: center;
-    padding: 2.125rem 1rem;
-    box-shadow: 0 4px 14px 0 rgba(51, 63, 72, 0.26); }
-    @media only screen and (max-width: 1023px) {
-      .cards .card {
-        margin: 10px 1.875rem; } }
+
+.card-col {
+  display: flex; }
+  @media only screen and (min-width: 1024px) {
+    .card-col {
+      width: calc(25% - 2.34375rem);
+      float: left;
+      margin-left: 1.875rem; } }
+  .card-col .card {
+    width: 80%;
+    margin: 0.625rem auto; }
     @media only screen and (min-width: 1024px) {
-      .cards .card {
-        width: calc(25% - 2.34375rem);
-        float: left;
-        margin-left: 1.875rem;
-        margin-top: 0;
-        margin-bottom: 0; } }
-  .cards .card img {
+      .card-col .card {
+        width: auto; } }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0.625rem;
+  text-align: center;
+  padding: 2.125rem 1.5rem;
+  box-shadow: 0 4px 14px 0 rgba(51, 63, 72, 0.26); }
+  .card--big {
+    margin: .625rem 2rem; }
+    @media only screen and (min-width: 1024px) {
+      .card--big .card__body {
+        margin-left: 4rem;
+        margin-right: 4rem; } }
+  .card__img {
     margin: 0 auto; }
-  .cards .card__title {
+  .card__title {
     margin: 1.875rem 0 0.625rem;
     font-weight: 600;
     color: #333f48;
     text-transform: uppercase; }
-  .cards .card__body {
+  .card__body {
     opacity: 0.8;
     line-height: 1.5rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: #697684; }
 
 .section {
   margin-top: 5.75rem;

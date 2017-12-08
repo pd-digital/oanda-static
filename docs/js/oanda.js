@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  if ($('.cards').length) {
-    $('.cards').slick({
+  if ($('#cards').length) {
+    $('#cards').slick({
       infinite: false,
       dots: true,
       arrows: false,
@@ -22,6 +22,14 @@ $(document).ready(function(){
           }
         }
       ]
+    });
+  }
+
+  if ($('#trading-cards').length) {
+    $('#trading-cards').slick({
+      infinite: false,
+      dots: true,
+      arrows: false
     });
   }
 });
