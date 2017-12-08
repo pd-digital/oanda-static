@@ -1,0 +1,9 @@
+.divider {
+  width: 100%;
+  border: 2px solid $grey-1;
+  margin: 2rem 0;
+
+  &--blue {
+    border: 2px solid $blue-2;
+  }
+}

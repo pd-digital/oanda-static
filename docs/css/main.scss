@@ -5,31 +5,31 @@ $hamburger-types: (slider);
 $hamburger-layer-width: 36px !default;
 $hamburger-layer-height: 4px !default;
 @import 'vendor/hamburgers/hamburgers';
+@import 'vendor/slick';
+@import 'vendor/slick-theme';
 
 @import 'variables';
 
 @import 'mixins/responsive';
 
-@import 'common/common';
-@import 'common/container';
-@import 'common/page_wrapper';
-@import 'common/grid';
-@import 'common/page_gradient';
 @import 'common/arrows';
 @import 'common/buttons';
+@import 'common/common';
+@import 'common/container';
+@import 'common/grid';
+@import 'common/page_gradient';
+@import 'common/page_wrapper';
 
-@import 'components/nav';
-@import 'components/header';
 @import 'components/cards';
-@import 'components/section';
-@import 'components/testimonial';
-@import 'components/proof_points';
-@import 'components/feed';
-@import 'components/timeline';
 @import 'components/ctas';
+@import 'components/divider';
+@import 'components/feed';
 @import 'components/footer';
+@import 'components/header';
 @import 'components/market_table';
+@import 'components/nav';
+@import 'components/proof_points';
+@import 'components/section';
 @import 'components/tabs';
-
-@import 'vendor/slick';
-@import 'vendor/slick-theme';
+@import 'components/timeline';
+@import 'components/testimonial';

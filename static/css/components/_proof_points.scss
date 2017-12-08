@@ -7,7 +7,7 @@ $foo-layout: (
 
 .proof-point-row {
   margin: 1.5rem 0;
-  
+
   @include wide-screens {
     @include grid-container;
     display: flex;
@@ -30,10 +30,15 @@ $foo-layout: (
 
 .proof-point {
   display: flex;
-  background: #fff;
 
   &--centered {
     align-items: center;
+  }
+
+  &--small {
+    .proof-point__title {
+      font-size: 1.125rem;
+    }
   }
 
   &__icon {
