@@ -548,22 +548,28 @@ hr {
 .section {
   margin-top: 5.75rem;
   margin-bottom: 3rem; }
-  .section .section__img {
+  .section--centered {
+    text-align: center; }
+  .section__img {
     max-width: 100%; }
   @media only screen and (max-width: 1023px) {
-    .section .section__img--wide {
+    .section__img--wide {
       max-width: 100%; } }
-  .section .section__title {
+  .section__title {
     color: #333f48;
     font-size: 2.25rem;
     line-height: 3rem;
     margin-bottom: 1.5rem; }
-  .section .section__body {
+  .section__body {
     margin-bottom: 1.125rem; }
-  .section .section__links {
+  @media only screen and (min-width: 1024px) {
+    .section__body--tight {
+      max-width: 39rem;
+      margin: 0 auto; } }
+  .section__links {
     margin-top: -0.75rem;
     display: inline-block; }
-  .section .section__link {
+  .section__link {
     margin-top: 0.75rem;
     width: 50%;
     float: left; }
@@ -872,6 +878,23 @@ hr {
         margin-bottom: 0; } }
   .footer .copyright__image {
     margin-right: 0.75rem; }
+
+.market-table {
+  border-collapse: collapse;
+  margin: 2rem auto 3rem;
+  text-align: left; }
+  @media only screen and (min-width: 1024px) {
+    .market-table {
+      min-width: 75%; } }
+  .market-table thead {
+    border-bottom: 2px solid #d2d6da; }
+  .market-table th {
+    color: #333f48;
+    font-weight: 600; }
+  .market-table th, .market-table td {
+    padding: 0.5rem 1.5rem; }
+  .market-table tbody tr:nth-child(odd) {
+    background-color: #f7f8f9; }
 
 /* Slider */
 .slick-slider {

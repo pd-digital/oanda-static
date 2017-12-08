@@ -2,33 +2,44 @@
   margin-top: 5.75rem;
   margin-bottom: 3rem;
 
-  .section__img {
+  &--centered {
+    text-align: center;
+  }
+
+  &__img {
     max-width: 100%;
   }
 
-  .section__img--wide {
+  &__img--wide {
     @include medium-screens {
       max-width: 100%;
     }
   }
 
-  .section__title {
+  &__title {
     color: #333f48;
     font-size: 2.25rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
   }
 
-  .section__body {
+  &__body {
     margin-bottom: 1.125rem;
   }
 
-  .section__links {
+  &__body--tight {
+    @include wide-screens {
+      max-width: 39rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__links {
     margin-top: -0.75rem;
     display: inline-block;
   }
 
-  .section__link {
+  &__link {
     margin-top: 0.75rem;
     width: 50%;
     float: left;

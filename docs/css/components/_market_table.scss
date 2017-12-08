@@ -1,0 +1,26 @@
+.market-table {
+  border-collapse: collapse;
+  margin: 2rem auto 3rem;
+  text-align: left;
+
+  @include wide-screens {
+    min-width: 75%;
+  }
+
+  thead {
+    border-bottom: 2px solid $grey-1;
+  }
+
+  th {
+    color: $heading-colour;
+    font-weight: 600;
+  }
+
+  th, td {
+    padding: 0.5rem 1.5rem;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: $grey-3;
+  }
+}
