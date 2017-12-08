@@ -1,37 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{.Site.Title}}</title>
-  <link rel="icon" href="{{ .Site.BaseURL }}/favicon.ico">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500|Roboto:500" rel="stylesheet">
-</head>
-<body>
-  <div class="page-wrapper">
-    {{ partial "nav.html" . }}
-    {{ partial "header.html" . }}
-    {{ partial "cards.html" . }}
-    {{ partial "section1.html" . }}
-    {{ partial "divider.html" . }}
+{{ define "main" }}
+  {{ partial "home/header.html" . }}
+  {{ partial "home/cards.html" . }}
+  {{ partial "home/section1.html" . }}
+  {{ partial "common/divider.html" . }}
 
-    {{ partial "testimonial.html" . }}
-    {{ partial "section2.html" . }}
-    {{ partial "section3.html" . }}
-    {{ partial "section4.html" . }}
-    {{ partial "section5.html" . }}
-    {{ partial "section6.html" . }}
-
-    {{ partial "footer.html" . }}
-    {{ partial "page-gradient.html" . }}
-  </div>
-
-  <!-- Dem JS -->
-  <script src="{{ .Site.BaseURL }}/js/jquery-3.2.1.min.js"></script>
-  <script src="{{ .Site.BaseURL }}/js/slick.min.js"></script>
-  <script src="{{ .Site.BaseURL }}/js/nav.js"></script>
-  <script src="{{ .Site.BaseURL }}/js/oanda.js"></script>
-</body>
-</html>
+  {{ partial "common/testimonial.html" . }}
+  {{ partial "home/section2.html" . }}
+  {{ partial "home/section3.html" . }}
+  {{ partial "home/section4.html" . }}
+  {{ partial "home/section5.html" . }}
+  {{ partial "home/section6.html" . }}
+{{ end }}

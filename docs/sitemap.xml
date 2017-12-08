@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/oanda-static/</loc>
+  </url>
+  
+  <url>
     <loc>/oanda-static/trading/</loc>
   </url>
   
@@ -12,17 +16,7 @@
   </url>
   
   <url>
-    <loc>/oanda-static/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/oanda-static/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/oanda-static/trading/</loc>
     <priority>0</priority>
   </url>
   
