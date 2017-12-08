@@ -27,11 +27,12 @@ const Nav = () => {
   }
 
   const onNavLinkClick = (e) => {
-    e.preventDefault();
+    if (e.target.attributes.href.value === '#') {
+      e.preventDefault();
+    }
 
     if (e.target.parentElement.className.indexOf('active') === -1) {
       if (e.target.attributes.href.value !== '#') return false;
-
 
       closeAnyOpenNavs()
       addClass(e.target.parentElement, 'active')
