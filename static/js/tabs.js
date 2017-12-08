@@ -23,7 +23,6 @@ const Tabs = () => {
       })
 
       addClass(e.target, 'active')
-      console.log(e.target.dataset.selector)
       flickTab(e.target.dataset.selector)
     }
   }
