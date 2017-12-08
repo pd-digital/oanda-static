@@ -11,6 +11,14 @@
       display: flex;
       background-color: initial;
     }
+
+    &__item {
+      + .topnav__item {
+        @include wide-screens {
+          margin-left: 2.25rem;
+        }
+      }
+    }
   }
 
   .mobile-active .topnav {
@@ -89,14 +97,6 @@
 
   .active .subnav {
     display: block;
-  }
-
-  .topnav__item {
-    + .topnav__item {
-      @include wide-screens {
-        margin-left: 2.25rem;
-      }
-    }
   }
 
   .nav-link {

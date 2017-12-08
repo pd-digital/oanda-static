@@ -4,13 +4,13 @@
     padding: 0 10rem;
   }
 
-  .testimonial__quote {
+  &__quote {
     font-size: 1.25rem;
     line-height: 2rem;
     color: $heading-colour;
   }
 
-  .testimonial__image {
+  &__image {
     border-radius: 50%;
     max-width: 7.5rem;
     max-height: 7.5rem;
@@ -24,14 +24,14 @@
     }
   }
 
-  .testimonial__name {
+  &__name {
     margin-top: 1.5rem;
     font-size: 1.25rem;
     font-weight: 600;
     color: $heading-colour;
   }
 
-  .testimonial__role {
+  &__role {
     opacity: 0.8;
   }
 }

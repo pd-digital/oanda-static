@@ -18,42 +18,43 @@ $grid-layout: (
 }
 
 .row {
-  + .row {
-    margin-top: 2rem;
-  }
-  
   @include wide-screens {
     @include grid-container;
     margin: 0 (-1 * $gutters);
   }
-}
 
-.row--reverse {
-  @include medium-screens {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+  &--reverse {
+    @include medium-screens {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
-  > :first-child {
-    margin-top: 2rem;
-    @include wide-screens {
-      margin-top: 0;
-    };
+    > :first-child {
+      margin-top: 2rem;
+      @include wide-screens {
+        margin-top: 0;
+      };
 
-    + div {
-      margin-top: 0;
+      + div {
+        margin-top: 0;
+      }
     }
   }
-}
 
-.row--centered {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  @include medium-screens {
+  &--centered {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include medium-screens {
+      display: flex;
+    }
   }
+
+  + .row {
+    margin-top: 2rem;
+  }
+
 }
 
 @for $i from 1 through 12 {

@@ -8,7 +8,22 @@ $arrow-size: 4px;
     padding-right: 0;
   }
 
-  .timeline__inner {
+  &--desktop {
+    display: none;
+    @include wide-screens {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    @include wide-screens {
+      display: none;
+    }
+
+    display: flex;
+  }
+
+  &__inner {
     transform: translateX(10px);
   }
 
@@ -74,24 +89,24 @@ $arrow-size: 4px;
       }
     }
 
-    +.event {
+    &--top {
+      &::after {
+        bottom: -24px;
+      }
+    }
+
+    &--bottom {
+      &::after {
+        top: -24px;
+      }
+    }
+
+    + .event {
       margin-top: .75rem;
 
       @include wide-screens {
         margin-top: 0;
       }
-    }
-  }
-
-  .event--top {
-    &::after {
-      bottom: -24px;
-    }
-  }
-
-  .event--bottom {
-    &::after {
-      top: -24px;
     }
   }
 
@@ -104,38 +119,23 @@ $arrow-size: 4px;
     position: absolute;
     left: 50%;
     margin-left: -$arrow-size;
-  }
 
-  .arrow--bottom {
-    bottom: -$arrow-size;
-    @include arrow('bottom', $white, $arrow-size);
-  }
+    &--bottom {
+      bottom: -$arrow-size;
+      @include arrow('bottom', $white, $arrow-size);
+    }
 
-  .arrow--top {
-    top: -$arrow-size;
-    @include arrow('top', $white, $arrow-size);
-  }
+    &--top {
+      top: -$arrow-size;
+      @include arrow('top', $white, $arrow-size);
+    }
 
-  .arrow--left {
-    left: -$arrow-size;
-    margin-left: 0;
-    top: 50%;
-    margin-top: -$arrow-size;
-    @include arrow('left', $white, $arrow-size);
+    &--left {
+      left: -$arrow-size;
+      margin-left: 0;
+      top: 50%;
+      margin-top: -$arrow-size;
+      @include arrow('left', $white, $arrow-size);
+    }
   }
-}
-
-.timeline--desktop {
-  display: none;
-  @include wide-screens {
-    display: block;
-  }
-}
-
-.timeline--mobile {
-  @include wide-screens {
-    display: none;
-  }
-
-  display: flex;
 }

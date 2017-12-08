@@ -25,17 +25,17 @@
     display: inline-block;
     margin: 0 auto;
   }
+}
 
-  .cta {
-    display: flex;
-    align-items: center;
-    @include wide-screens {
-      justify-content: center;
-    }
-    color: $text-colour;
+.cta {
+  display: flex;
+  align-items: center;
+  @include wide-screens {
+    justify-content: center;
   }
+  color: $text-colour;
 
-  .cta__image {
+  &__image {
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
