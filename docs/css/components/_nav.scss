@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.25rem;
+
+  .leftnav {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 3rem;
+  }
+
+  .subnav {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    background: $white;
+    padding: 1.5rem;
+    border-radius: 4px;
+  }
+
+  .arrow {
+    @include arrow('top', $white, 0.5rem);
+    position: absolute;
+    top: -0.5rem;
+  }
+
+  .subnav__item + .subnav__item {
+    margin-top: 1rem;
+  }
+
+  .hover .subnav {
+    display: block;
+  }
+
+  .topnav {
+    display: flex;
+  }
+
+  .topnav__item + .topnav__item {
+    margin-left: 2.25rem;
+  }
+
+  .nav-link {
+    color: $white;
+  }
+}
