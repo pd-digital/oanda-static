@@ -585,8 +585,9 @@ hr {
   @media only screen and (max-width: 1023px) {
     .section__img--wide {
       max-width: 100%; } }
-  .section__img--custom-offset {
-    margin-top: -6.7rem; }
+  @media only screen and (min-width: 1024px) {
+    .section__img--custom-offset {
+      margin-top: -6.7rem; } }
   .section__title {
     color: #333f48;
     font-size: 2.25rem;

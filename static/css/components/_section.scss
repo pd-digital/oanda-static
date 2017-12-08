@@ -24,7 +24,9 @@
   }
 
   &__img--custom-offset {
-    margin-top: -6.7rem;
+    @include wide-screens {
+      margin-top: -6.7rem;
+    }
   }
 
   &__title {
