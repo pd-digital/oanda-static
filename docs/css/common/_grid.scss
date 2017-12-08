@@ -18,6 +18,10 @@ $grid-layout: (
 }
 
 .row {
+  + .row {
+    margin-top: 2rem;
+  }
+  
   @include wide-screens {
     @include grid-container;
     margin: 0 (-1 * $gutters);

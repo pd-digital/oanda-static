@@ -168,6 +168,9 @@ hr {
   width: 100%;
   overflow: hidden; }
 
+.row + .row {
+  margin-top: 2rem; }
+
 @media only screen and (min-width: 1024px) {
   .row {
     margin: 0 -4rem; }
@@ -596,43 +599,43 @@ hr {
 .testimonial .testimonial__role {
   opacity: 0.8; }
 
+.proof-point-row {
+  margin: 1.5rem 0; }
+  @media only screen and (min-width: 1024px) {
+    .proof-point-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1.5rem -1.875rem; }
+      .proof-point-row::after {
+        clear: both;
+        content: "";
+        display: block; } }
+
+.proof-point-col + .proof-point-col {
+  margin-top: 1rem; }
+
 @media only screen and (min-width: 1024px) {
-  .proof-points {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1.875rem 1.5rem; }
-    .proof-points::after {
-      clear: both;
-      content: "";
-      display: block; } }
+  .proof-point-col {
+    width: calc(33.33333% - 2.5rem);
+    float: left;
+    margin-left: 1.875rem; }
+    .proof-point-col + .proof-point-col {
+      margin-top: 0; } }
 
-@media only screen and (max-width: 1023px) {
-  .proof-points {
-    margin-top: 2rem;
-    margin-bottom: 1.25rem; } }
-
-.proof-points .proof-point {
+.proof-point {
   display: flex;
   background: #fff; }
-  @media only screen and (min-width: 1024px) {
-    .proof-points .proof-point {
-      width: calc(33.33333% - 2.5rem);
-      float: left;
-      margin-left: 1.875rem; } }
-  @media only screen and (max-width: 1023px) {
-    .proof-points .proof-point + .proof-point {
-      margin-top: 2rem; } }
-
-.proof-points .proof-point__icon {
-  display: block;
-  margin-right: 1.25rem;
-  max-width: 3rem;
-  max-height: 3rem; }
-
-.proof-points .proof-point__title {
-  color: #333f48;
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem; }
+  .proof-point--centered {
+    align-items: center; }
+  .proof-point__icon {
+    display: block;
+    margin-right: 1.25rem;
+    max-width: 3rem;
+    max-height: 3rem; }
+  .proof-point__title {
+    color: #333f48;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem; }
 
 @media only screen and (min-width: 1024px) {
   .feed {
