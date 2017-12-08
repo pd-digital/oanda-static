@@ -353,14 +353,32 @@ hr {
 
 .btn {
   display: inline-block;
-  border: none;
+  border: 1px solid #d2d6da;
   border-radius: 6.25rem;
   padding: 0.625rem 3rem;
   background: #a5adb5;
   color: #fff;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 1rem; }
+  .btn:hover {
+    cursor: pointer; }
   .btn--primary {
-    background-color: #096eb3; }
+    background-color: #096eb3;
+    border-color: #096eb3; }
+  .btn--narrow {
+    padding: 0.625rem 1rem; }
+  .btn--white {
+    background-color: #fff;
+    border: 1px solid #d2d6da;
+    color: #697684; }
+  .btn--white.active {
+    background-color: #096eb3;
+    color: #fff; }
+
+.buttons {
+  margin-top: 2rem; }
+  .buttons .btn + .btn {
+    margin-left: 0.5rem; }
 
 @media only screen and (min-width: 1024px) {
   .nav {
@@ -895,6 +913,12 @@ hr {
     padding: 0.5rem 1.5rem; }
   .market-table tbody tr:nth-child(odd) {
     background-color: #f7f8f9; }
+
+.tab {
+  display: none; }
+
+.tab.active {
+  display: block; }
 
 /* Slider */
 .slick-slider {

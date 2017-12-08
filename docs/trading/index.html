@@ -213,43 +213,95 @@
   <div class="section section--centered container">
   <h2 class="section__title">Trade the markets that are valuable to you</h2>
   <p class="section__body section__body--tight">Trade across the most important 100 instruments including currency pairs, indices, commodities, bonds and precious metals with competitive pricing.</p>
+  <div class="buttons">
+  <button class="btn btn--white btn--narrow active" data-toggle="tab" data-selector="#forex">Forex</button>
+  <button class="btn btn--white btn--narrow" data-toggle="tab" data-selector="#indices">Indices</button>
+  <button class="btn btn--white btn--narrow" data-toggle="tab" data-selector="#commodities">Commodoties</button>
+  <button class="btn btn--white btn--narrow" data-toggle="tab" data-selector="#metals">Metals</button>
+  <button class="btn btn--white btn--narrow" data-toggle="tab" data-selector="#bonds">Bonds</button>
+</div>
+
+
+<div class="tab active" id="forex">
   <table class="market-table">
-  <thead>
-    <th>FX Pair</th>
-    <th>Minimum spread</th>
-    <th>Average spread</th>
-    <th>Margins from</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>EUR/USD</td>
-      <td>0.5 points</td>
-      <td>0.69 points</td>
-      <td>0.5%</td>
-    </tr>
+    <thead>
+      <th>FX Pair</th>
+      <th>Minimum spread</th>
+      <th>Average spread</th>
+      <th>Margins from</th>
+    </thead>
 
-    <tr>
-      <td>AUD/USD</td>
-      <td>0.5 points</td>
-      <td>0.73 points</td>
-      <td>0.5%</td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>EUR/USD</td>
+        <td>0.5 points</td>
+        <td>0.69 points</td>
+        <td>0.5%</td>
+      </tr>
 
-    <tr>
-      <td>USD/JPY</td>
-      <td>0.5 points</td>
-      <td>0.77 points</td>
-      <td>0.5%</td>
-    </tr>
+      <tr>
+        <td>AUD/USD</td>
+        <td>0.5 points</td>
+        <td>0.73 points</td>
+        <td>0.5%</td>
+      </tr>
 
-    <tr>
-      <td>GBP/USD</td>
-      <td>0.5 points</td>
-      <td>1.22 points</td>
-      <td>0.5%</td>
-    </tr>
-  </tbody>
-</table>
+      <tr>
+        <td>USD/JPY</td>
+        <td>0.5 points</td>
+        <td>0.77 points</td>
+        <td>0.5%</td>
+      </tr>
+
+      <tr>
+        <td>GBP/USD</td>
+        <td>0.5 points</td>
+        <td>1.22 points</td>
+        <td>0.5%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tab" id="indices">
+  <table class="market-table" id="indices">
+    <tbody>
+      <tr>
+        <td>Indices</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tab" id="commodities">
+  <table class="market-table">
+    <tbody>
+      <tr>
+        <td>Commodities</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tab" id="metals">
+  <table class="market-table">
+    <tbody>
+      <tr>
+        <td>Metals</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tab" id="bonds">
+  <table class="market-table">
+    <tbody>
+      <tr>
+        <td>Bonds</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   <a class="chevron" href="#">See the live rates</a>
 </div>
@@ -353,6 +405,7 @@
   <script src="/oanda-static/js/jquery-3.2.1.min.js"></script>
   <script src="/oanda-static/js/slick.min.js"></script>
   <script src="/oanda-static/js/nav.js"></script>
+  <script src="/oanda-static/js/tabs.js"></script>
   <script src="/oanda-static/js/oanda.js"></script>
 </body>
 </html>

@@ -1,13 +1,42 @@
 .btn {
   display: inline-block;
-  border: none;
+  border: 1px solid $grey-1;
   border-radius: 6.25rem;
   padding: 0.625rem 3rem;
   background: $grey-2;
   color: $white;
   font-weight: 600;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &--primary {
     background-color: $blue-2;
+    border-color: $blue-2;
+  }
+
+  &--narrow {
+    padding: 0.625rem 1rem;
+  }
+
+  &--white {
+    background-color: $white;
+    border: 1px solid $grey-1;
+    color: $text-colour;
+  }
+
+  &--white.active {
+    background-color: $blue-2;
+    color: $white;
+  }
+}
+
+.buttons {
+  margin-top: 2rem;
+
+  .btn + .btn {
+    margin-left: 0.5rem;
   }
 }
