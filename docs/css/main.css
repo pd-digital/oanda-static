@@ -303,7 +303,7 @@ hr {
     top: -0.5rem; }
   .nav .subnav__item + .subnav__item {
     margin-top: 1rem; }
-  .nav .hover .subnav {
+  .nav .active .subnav {
     display: block; }
   .nav .topnav {
     display: flex; }
