@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/oanda-static"
 languageCode = "en-us"
 title = "Online Trading & FX for Business | OANDA"
 publishDir = "docs"
