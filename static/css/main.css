@@ -376,7 +376,15 @@ hr {
     color: #fff; }
 
 .buttons {
-  margin-top: 2rem; }
+  margin-top: 1.25rem; }
+  @media only screen and (min-width: 1024px) {
+    .buttons {
+      margin-top: 2rem; } }
+  .buttons .btn {
+    margin-top: 0.75rem; }
+    @media only screen and (min-width: 1024px) {
+      .buttons .btn {
+        margin-top: 0; } }
   .buttons .btn + .btn {
     margin-left: 0.5rem; }
 
@@ -568,11 +576,17 @@ hr {
   margin-bottom: 3rem; }
   .section--centered {
     text-align: center; }
+  .section--grey {
+    background-color: #f7f8f9;
+    padding-top: 5.75rem;
+    padding-bottom: 3rem; }
   .section__img {
     max-width: 100%; }
   @media only screen and (max-width: 1023px) {
     .section__img--wide {
       max-width: 100%; } }
+  .section__img--custom-offset {
+    margin-top: -6.7rem; }
   .section__title {
     color: #333f48;
     font-size: 2.25rem;
@@ -910,7 +924,10 @@ hr {
     color: #333f48;
     font-weight: 600; }
   .market-table th, .market-table td {
-    padding: 0.5rem 1.5rem; }
+    padding: 0.5rem 0.1rem; }
+    @media only screen and (min-width: 1024px) {
+      .market-table th, .market-table td {
+        padding: 0.5rem 1.5rem; } }
   .market-table tbody tr:nth-child(odd) {
     background-color: #f7f8f9; }
 

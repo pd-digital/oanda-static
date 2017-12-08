@@ -34,7 +34,18 @@
 }
 
 .buttons {
-  margin-top: 2rem;
+  margin-top: 1.25rem;
+  @include wide-screens {
+    margin-top: 2rem;
+  }
+
+  .btn {
+    margin-top: 0.75rem;
+
+    @include wide-screens {
+      margin-top: 0;
+    }
+  }
 
   .btn + .btn {
     margin-left: 0.5rem;

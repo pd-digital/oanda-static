@@ -6,6 +6,13 @@
     text-align: center;
   }
 
+  &--grey {
+    background-color: $grey-3;
+    padding-top: 5.75rem;
+    padding-bottom: 3rem;
+
+  }
+
   &__img {
     max-width: 100%;
   }
@@ -14,6 +21,10 @@
     @include medium-screens {
       max-width: 100%;
     }
+  }
+
+  &__img--custom-offset {
+    margin-top: -6.7rem;
   }
 
   &__title {
