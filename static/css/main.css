@@ -956,11 +956,12 @@ hr {
         content: "";
         display: block; } }
   .proof-point-row--bio {
+    position: relative;
     margin-top: 2rem; }
     @media only screen and (min-width: 1024px) {
       .proof-point-row--bio {
-        margin: 1.5rem -0.5rem;
-        margin-top: 4rem; } }
+        margin: 0 -0.5rem 1.5rem;
+        padding-top: 2.5rem; } }
 
 .proof-point-col + .proof-point-col {
   margin-top: 1rem; }
@@ -981,6 +982,13 @@ hr {
       float: left;
       margin-left: 0.5rem; } }
 
+.bio-title {
+  text-transform: uppercase; }
+  @media only screen and (min-width: 1024px) {
+    .bio-title {
+      position: absolute;
+      top: 0; } }
+
 .proof-point {
   display: flex;
   text-align: left; }
@@ -991,7 +999,7 @@ hr {
     font-size: 1.125rem; }
   .proof-point--bio {
     font-size: 0.875rem;
-    line-height: 1rem; }
+    line-height: 1.25rem; }
     .proof-point--bio .proof-point__title {
       font-size: 1rem; }
     .proof-point--bio .proof-point__icon {

@@ -21,11 +21,12 @@ gutter: $bio-gutters,
   }
 
   &--bio {
+    position: relative;
     margin-top: 2rem;
 
     @include wide-screens {
-      margin: 1.5rem -1 * $bio-gutters;
-      margin-top: 4rem;
+      margin: 0 -1 * $bio-gutters 1.5rem;
+      padding-top: 2.5rem;
     }
   }
 }
@@ -50,6 +51,14 @@ gutter: $bio-gutters,
   }
 }
 
+.bio-title {
+  @include wide-screens {
+    position: absolute;
+    top: 0;
+  }
+  text-transform: uppercase;
+}
+
 .proof-point {
   display: flex;
   text-align: left;
@@ -67,7 +76,7 @@ gutter: $bio-gutters,
 
   &--bio {
     font-size: 0.875rem;
-    line-height: 1rem;
+    line-height: 1.25rem;
 
     .proof-point__title {
       font-size: 1rem;
