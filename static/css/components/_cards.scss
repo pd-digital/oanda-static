@@ -1,6 +1,6 @@
 $gutters: 1.875rem;
 $card-layout: (
-  columns: 4,
+  columns: 12,
   gutter: $gutters,
 );
 
@@ -9,7 +9,7 @@ $card-layout: (
 
   @include wide-screens {
     @include grid-container;
-    margin: 0 (-1 * $gutters);
+    margin: 1.125rem (-1 * $gutters) 0;
     display: flex;
   }
 }
@@ -18,7 +18,24 @@ $card-layout: (
   display: flex;
 
   @include wide-screens {
-    @include grid-column(1, $card-layout);
+    @include grid-column(3, $card-layout);
+  }
+
+  .card {
+    width: 80%;
+    margin: 0.625rem auto;
+
+    @include wide-screens {
+      width: auto;
+    }
+  }
+}
+
+.card-col-4 {
+  display: flex;
+
+  @include wide-screens {
+    @include grid-column(4, $card-layout);
   }
 
   .card {
@@ -32,15 +49,21 @@ $card-layout: (
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 
   background: #fff;
   border-radius: 0.625rem;
   text-align: center;
   padding: 2.125rem 1.5rem;
   box-shadow: 0 4px 14px 0 rgba(51, 63, 72, 0.26);
+
+  &--left {
+    text-align: left;
+  }
 
   &--big {
     margin: .625rem 2rem;
@@ -53,12 +76,22 @@ $card-layout: (
     }
   }
 
+  &__stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(96deg, $blue, $green);
+    height: 0.25rem;
+    width: 100%;
+  }
+
   &__img {
     margin: 0 auto;
+    margin-bottom: 1.875rem;
   }
 
   &__title {
-    margin: 1.875rem 0 0.625rem;
+    margin-bottom: 0.625rem;
     font-weight: 600;
     color: $heading-colour;
     text-transform: uppercase;

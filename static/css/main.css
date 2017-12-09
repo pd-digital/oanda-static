@@ -599,7 +599,7 @@ hr {
   margin-top: -0.625rem; }
   @media only screen and (min-width: 1024px) {
     .card-row {
-      margin: 0 -1.875rem;
+      margin: 1.125rem -1.875rem 0;
       display: flex; }
       .card-row::after {
         clear: both;
@@ -620,25 +620,51 @@ hr {
       .card-col .card {
         width: auto; } }
 
+.card-col-4 {
+  display: flex; }
+  @media only screen and (min-width: 1024px) {
+    .card-col-4 {
+      width: calc(33.33333% - 2.5rem);
+      float: left;
+      margin-left: 1.875rem; } }
+  .card-col-4 .card {
+    width: 80%;
+    margin: 0.625rem auto; }
+    @media only screen and (min-width: 1024px) {
+      .card-col-4 .card {
+        width: auto; } }
+
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   background: #fff;
   border-radius: 0.625rem;
   text-align: center;
   padding: 2.125rem 1.5rem;
   box-shadow: 0 4px 14px 0 rgba(51, 63, 72, 0.26); }
+  .card--left {
+    text-align: left; }
   .card--big {
     margin: .625rem 2rem; }
     @media only screen and (min-width: 1024px) {
       .card--big .card__body {
         margin-left: 4rem;
         margin-right: 4rem; } }
+  .card__stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(96deg, #0c95f3, #0dfd9a);
+    height: 0.25rem;
+    width: 100%; }
   .card__img {
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 1.875rem; }
   .card__title {
-    margin: 1.875rem 0 0.625rem;
+    margin-bottom: 0.625rem;
     font-weight: 600;
     color: #333f48;
     text-transform: uppercase; }
@@ -791,6 +817,11 @@ hr {
     margin-top: 1.5rem; }
   .header--left {
     text-align: left; }
+
+.image-group {
+  margin: 3.5rem; }
+  .image-group__img {
+    margin: 0.5rem 1.5rem; }
 
 .market-table {
   border-collapse: collapse;
@@ -979,7 +1010,7 @@ hr {
   @media only screen and (min-width: 1024px) {
     .section__body--tight {
       max-width: 39rem;
-      margin: 0 auto; } }
+      margin: 0 auto 2.5rem; } }
   .section__links {
     margin-top: -0.75rem;
     display: inline-block; }
