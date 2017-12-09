@@ -1,8 +1,13 @@
 $margin-top-bottom-offset: 0.625rem;
 $gutters: 1.875rem;
-$foo-layout: (
-  columns: 3,
+$bio-gutters: 0.5rem;
+$proof-point-layout: (
+  columns: 6,
   gutter: $gutters,
+);
+$bio-layout: (
+columns: 6,
+gutter: $bio-gutters,
 );
 
 .proof-point-row {
@@ -14,6 +19,15 @@ $foo-layout: (
     flex-wrap: wrap;
     margin: 1.5rem -1 * $gutters;
   }
+
+  &--bio {
+    margin-top: 2rem;
+
+    @include wide-screens {
+      margin: 1.5rem -1 * $bio-gutters;
+      margin-top: 4rem;
+    }
+  }
 }
 
 .proof-point-col {
@@ -21,10 +35,18 @@ $foo-layout: (
     margin-top: 1rem;
   }
   @include wide-screens {
-    @include grid-column(1, $foo-layout);
+    @include grid-column(2, $proof-point-layout);
     + .proof-point-col {
       margin-top: 0;
     }
+  }
+}
+
+.proof-point-bio-col {
+  margin-top: 2rem;
+
+  @include wide-screens {
+    @include grid-column(3, $bio-layout);
   }
 }
 
@@ -40,6 +62,19 @@ $foo-layout: (
   &--small {
     .proof-point__title {
       font-size: 1.125rem;
+    }
+  }
+
+  &--bio {
+    font-size: 0.875rem;
+    line-height: 1rem;
+
+    .proof-point__title {
+      font-size: 1rem;
+    }
+
+    .proof-point__icon {
+      border-radius: 50%;
     }
   }
 
