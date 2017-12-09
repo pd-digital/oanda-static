@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  border: 1px solid $grey-1;
+  border: 2px solid $grey-1;
   border-radius: 6.25rem;
   padding: 0.625rem 3rem;
   background: $grey-2;
@@ -23,13 +23,18 @@
 
   &--white {
     background-color: $white;
-    border: 1px solid $grey-1;
+    border-color: $grey-1;
     color: $text-colour;
   }
 
   &--white.active {
     background-color: $blue-2;
     color: $white;
+  }
+
+  &--ghost {
+    background-color: transparent;
+    border-color: $white;
   }
 }
 

@@ -327,7 +327,7 @@ table {
 
 .btn {
   display: inline-block;
-  border: 1px solid #d2d6da;
+  border: 2px solid #d2d6da;
   border-radius: 6.25rem;
   padding: 0.625rem 3rem;
   background: #a5adb5;
@@ -343,11 +343,14 @@ table {
     padding: 0.625rem 1rem; }
   .btn--white {
     background-color: #fff;
-    border: 1px solid #d2d6da;
+    border-color: #d2d6da;
     color: #697684; }
   .btn--white.active {
     background-color: #096eb3;
     color: #fff; }
+  .btn--ghost {
+    background-color: transparent;
+    border-color: #fff; }
 
 .buttons {
   margin-top: 1.25rem; }
@@ -703,6 +706,17 @@ hr {
     height: 2rem;
     margin-right: 1rem; }
 
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .cta-banner__title {
+    color: #fff;
+    font-size: 2.25rem;
+    margin-right: 2rem; }
+  .cta-banner__btn {
+    margin: 0 1rem; }
+
 .divider {
   width: 100%;
   border: 2px solid #d2d6da;
@@ -737,9 +751,6 @@ hr {
 .footer {
   background-color: #f7f8f9;
   border-top: 1px solid #d2d6da; }
-  @media only screen and (min-width: 1024px) {
-    .footer {
-      margin-top: 6rem; } }
   .footer__bottom {
     border-top: 1px solid #d2d6da;
     padding: 2rem 0 4rem; }
@@ -1003,7 +1014,9 @@ hr {
     .proof-point--bio .proof-point__title {
       font-size: 1rem; }
     .proof-point--bio .proof-point__icon {
-      border-radius: 50%; }
+      border-radius: 50%;
+      max-width: 3.75rem;
+      max-height: 3.75rem; }
   .proof-point__icon {
     display: block;
     margin-right: 1.25rem;
@@ -1017,13 +1030,18 @@ hr {
 
 .section {
   margin-top: 5.75rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 5.75rem; }
   .section--centered {
     text-align: center; }
   .section--grey {
     background-color: #f7f8f9;
     padding-top: 5.75rem;
     padding-bottom: 5rem; }
+  .section--gradient {
+    background: linear-gradient(164deg, #0c95f3, #0dfd9a);
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    margin-bottom: 0; }
   .section__img {
     max-width: 100%; }
   @media only screen and (max-width: 1023px) {

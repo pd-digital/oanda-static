@@ -1,6 +1,6 @@
 .section {
   margin-top: 5.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5.75rem;
 
   &--centered {
     text-align: center;
@@ -10,6 +10,13 @@
     background-color: $grey-3;
     padding-top: 5.75rem;
     padding-bottom: 5rem;
+  }
+
+  &--gradient {
+    background: linear-gradient(164deg, $blue, $green);
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    margin-bottom: 0;
   }
 
   &__img {
