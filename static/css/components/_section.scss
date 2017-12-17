@@ -54,13 +54,13 @@
   }
 
   &__links {
-    margin-top: -0.75rem;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -1rem;
   }
 
   &__link {
-    margin-top: 0.75rem;
-    width: 50%;
-    float: left;
+    flex: 1 1 50%;
+    margin-top: 1rem;
   }
 }
